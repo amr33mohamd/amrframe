@@ -4,8 +4,8 @@ class db extends father{
 		$server = 'localhost';
 		$user = 'root';
 		$pass = '';
-		$db = 'amor';
-		@$conn = new mysqli("$server","$user","$pass","$db");
+		$db = 'amrframe';
+		$conn = new mysqli("$server","$user","$pass","$db");
 		
 		global $db_config;
 		$db_config = array('server' =>$server ,'user'=>$user,'pass'=>$pass,'db'=>$db );

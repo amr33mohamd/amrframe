@@ -55,15 +55,18 @@ public function __construct(){
 
 
 		//editing database -------->
-		$ed_db = $main->edit_db_config("$db_host","$db_username","$db_pass","$db_name","$theme");
-
+		$this->edit_db_config($db_host,$db_username,$db_pass,$db_name);
+        
 		sleep(2);
+        
+        $this->add_db($db_host,$db_username,$db_pass,$db_name);
+        sleep(2);
 		//isstalling data base 
-		$install = $main->install('install');
+        $this->install('install');
        
 		
 			//adding the admin ----->
-			$main->add_user("$name","$email","$pass","1");
+			$this->add_user($name,$email,$pass,'1',$db_host,$db_username,$db_pass,$db_name);
 		
 
 		

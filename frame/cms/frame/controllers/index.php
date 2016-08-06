@@ -44,9 +44,9 @@ $this->add_user($name,$email,$pass,1,$db_host,$db_username,$db_pass,$db_name);
 			}
 			elseif($this->check_db() == 0){
 				// can't find users table  -------->
-				$this->add_db();
+				$this->add_db($db_host,$db_username,$db_pass,$db_name);
 				sleep(3);
-				$this->add_user($name,$email,$pass,1);
+				$this->add_user($name,$email,$pass,'1',$db_host,$db_username,$db_pass,$db_name);
 			}
 			elseif($this->check_db() == 1){
 				//database ok ..... ------->
