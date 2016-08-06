@@ -1,0 +1,4 @@
+<things still need >
+1- editing htaccess in instalion ---> 
+2- check connecr data before edit the file ------->
+</stop>
